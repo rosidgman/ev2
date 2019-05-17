@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Bitter:700&display=swap');
 
 html,body{
 	min-height: 100%
@@ -13,7 +14,8 @@ h2{
 }
 
 h1{
-	font-family: 'Slabo 27px', serif;
+	font-family: 'Bitter', serif;
+	color: #fcb3ac
 	}
 
 p{
@@ -26,4 +28,11 @@ p{
 }
 .bg-rosado{
 	background: rgba(255, 192, 192, 1.00);
+
+}
+
+img {
+	border-style: double;
+	border-width: 10px;
+	border-color: #313131;
 }

@@ -13,7 +13,8 @@
         <div class="col-11 col-sm-10 mx-auto">
 
           <h1>Sofía Hinostroza</h1>  
-          <p class = "lead">Estos son los trabajos de mi amiga Sofía.</p>
+          <h2 class="lead">Sobreviviendo hace <span id="muchotiempo"></span> días.</h2>
+          <p class = "lead">Estos son algunos de los trabajos desarrollados por mi amiga Sofía.</p>
               <div id="cuestiones"></div>            
         </div>  
       </div>      
@@ -37,10 +38,14 @@
   console.log(curso);
 
         $.each(curso[9].trabajos, function(i, trabajo) {
-        $("#cuestiones").append("<h5 class='my-2 py-3 pl-2 text-info'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "' class='img-fluid pb-3 mb-3'>").append("<p class='my-2 py-1 pl-2 text-info border-bottom'>" + trabajo.descriptor + "</p>");
+        $("#cuestiones").append("<h5 class='my-2 py-3 pl-2 text-info'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "' class='img-fluid mt-3'>").append("<p class='my-2 py-1 pl-2 text-info border-bottom'>" + trabajo.descriptor + "</p>");
 
           });
         });
+      var fechaNacimiento = new Date('1995-06-08').getTime();
+        var fechaHoy = new Date().getTime();
+        var diferencia = fechaHoy - fechaNacimiento;
+        document.getElementById("muchotiempo").innerHTML = Math.round(diferencia / (1000 * 60 * 60 * 24));
     </script>
   </body>
 </html>
